@@ -1,0 +1,5 @@
+
+
+echo FLUX_JOB_ID
+FLUX_JOB_DATA=`flux job info $FLUX_JOB_ID jobspec` ; # job data is transferred in json
+
