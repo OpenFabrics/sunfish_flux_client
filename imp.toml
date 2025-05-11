@@ -1,0 +1,22 @@
+#####             /etc/flux/imp/conf.d/imp.toml             ######
+##### Provides Flux Core with the set-ups for Prolog/Epilog ######
+[exec]
+allowed-users = [ "flux" ]
+allowed-shells = [ "/users/libexec/flux/flux-shell" ]
+pam-support = true
+
+[run.prolog]
+allowed-environment = ["FLUX_*" ]
+allowed-users = [ "flux" ]
+path = "/etc/flux/system/prolog"
+
+[run.epilog]
+allowed-environment = [ "FLUX_*" ]
+allowed-users = [ "flux" ]
+path = "/etc/flux/system/epilog"
+
+[run.housekeeping]
+allowed-users = [ "flux" ]
+allowed-environment = [ "FLUX_*" ]
+path = "/usr/libexec/flux/cmd/flux-run-housekeeping"
+
